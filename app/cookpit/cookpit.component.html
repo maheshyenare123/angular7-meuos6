@@ -1,0 +1,13 @@
+<label class="form-label">Name</label>
+<!-- <input class="form-control form-control-sm" type="text" [(ngModel)]="name" /> -->
+<input class="form-control form-control-sm" #nameInput />
+<label class="form-label">Content</label>
+<!-- <input class="form-control form-control-sm" type="text" [(ngModel)]="content" /> -->
+<input class="form-control form-control-sm" #contentInput />
+<br />
+<button class="btn btn-primary btn-sm" (click)="onAddServer(nameInput)">
+  onAddServer</button
+>&nbsp;
+<button class="btn btn-primary btn-sm" (click)="onAddBlueprint(nameInput)">
+  onAddBlueprint
+</button>

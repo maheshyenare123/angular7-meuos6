@@ -1,0 +1,24 @@
+<!-- <hello name="{{ name }}"></hello>
+<p>Start editing to see some magic happen :)</p> -->
+<div class="container">
+  <app-cookpit
+    (serverAdded)="onServerAdded($event)"
+    (blueprintAdded)="onBlueprintAdded($event)"
+  ></app-cookpit>
+  <br />
+  <br />
+  <button class="btn btn-primary" (click)="onFirstChange()">
+    Change First Element
+  </button>
+  <br />
+  <br />
+  <app-server
+    *ngFor="let server of servers"
+    [element]="server"
+    [name]="server.name"
+  >
+    <p [ngStyle]="{ color: server.type == 'server' ? 'red' : 'blue' }">
+      {{ server.content }}
+    </p>
+  </app-server>
+</div>
